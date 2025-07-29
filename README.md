@@ -3,4 +3,5 @@
 
 This extension scans Twitch pages you're already on to check if a YouTube stream exists. No Twitch data is sent to any server.
 
-The code for the cloud function used in this extension will remain private.
+https://chromewebstore.google.com/detail/youroute/dmnhjeilijpcgidmbklbdeeaibogaomb?utm_source=item-share-cb
+
