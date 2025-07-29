@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "YouRoute",
+  "version": "1.1",
+  "permissions": ["storage"],
+  "description": "Redirect Twitch streamers to their YouTube live stream if available.",
+  "host_permissions": ["https://www.twitch.tv/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitch.tv/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/SafeLogo16.png",
+      "32": "icons/SafeLogo32.png",
+      "48": "icons/SafeLogo48.png",
+      "128": "icons/SafeLogo128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/SafeLogo16.png",
+    "32": "icons/SafeLogo32.png",
+    "48": "icons/SafeLogo48.png",
+    "128": "icons/SafeLogo128.png"
+  }
+}

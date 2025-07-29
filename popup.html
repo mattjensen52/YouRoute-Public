@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouRoute Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      color: #333;
+      width: 300px;
+    }
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .section {
+      margin-bottom: 1.25rem;
+    }
+
+    /* Toggle switch container */
+    .toggle-switch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+    .status-label {
+      font-weight: bold;
+      margin-left: 0.5rem;
+    }
+
+    /* Slider styling */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #007bff;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .donate-buttons img {
+      max-width: 100%;
+      margin-bottom: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button, a.button {
+      background-color: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 0.25rem;
+      cursor: pointer;
+    }
+    button:hover, a.button:hover {
+      background-color: #0056b3;
+    }
+    .future-section {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- On/Off Toggle -->
+  <div class="section toggle-switch">
+    <div style="display:flex; align-items:center;">
+      <label class="switch">
+        <input type="checkbox" id="toggleEnabled">
+        <span class="slider"></span>
+      </label>
+      <span id="statusLabel" class="status-label"></span>
+    </div>
+  </div>
+
+  <!-- Donate Section -->
+  <div class="section donate-buttons">
+    <h1>Donate</h1>
+    <p>If you find this extension useful, please consider donating.</p>
+    <p>There are no ads, no analytics, and we do not collect or share any personal data <b>except</b> minimal IP logging strictly for rate-limiting purposes. Donations are used to cover API and hosting costs.</p>
+    <img src="icons/VenmoQR.png" alt="Venmo QR Code" />
+    <a class="button" href="https://www.paypal.com/donate/?hosted_button_id=W3SMGWP2U5YTQ" target="_blank">
+      Donate with PayPal
+    </a>
+    <a class="button" href="https://coff.ee/matthewajeu" target="_blank">
+      Buy Me a Coffee
+    </a>
+  </div>
+
+  <!-- Future Features -->
+  <div class="section future-section">
+    <p>Coming soon: Premium with unlimited lookups</p>
+    <p>Suggestions? Feedback? Bugs? Email <a href="mailto:youroutedev@gmail.com">youroutedev@gmail.com</a></p>
+  </div>
+
+  <!-- Popup script -->
+  <script src="popup.js"></script>
+</body>
+</html>
